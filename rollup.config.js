@@ -12,6 +12,16 @@ require("dotenv").config()
 
 const production = !process.env.ROLLUP_WATCH;
 
+console.log('Is this production?', production);
+
+if (production) {
+  console.log('The SERVER is:', process.env.PROD_SERVER);
+}
+
+if (!production) {
+  console.log('The SERVER is:', process.env.DEV_SERVER);
+}
+
 const timestamp = new Date()
   .toLocaleString()
   .replace(" ", "")
