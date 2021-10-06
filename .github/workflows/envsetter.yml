@@ -9,8 +9,9 @@ jobs:
     env:
       PROD_SERVER: "emsx.vet"
       DEV_SERVER: "development.emsx.vet"
+
     steps:
       - name: Set ENV for node
-      run: |
-        echo "The production server is ${{ env.PROD_SERVER }}"
-        echo "The development server is ${{ env.DEV_SERVER }}"
+        run: |
+          echo "The production server is ${{ env.PROD_SERVER }}"
+          echo "The development server is ${{ env.DEV_SERVER }}"
